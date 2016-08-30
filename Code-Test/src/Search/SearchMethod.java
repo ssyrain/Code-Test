@@ -1,8 +1,12 @@
 package Search;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class SearchMethod {
 
 	/**
+	 * @problemType DFS
 	 * given an array of num, judge whether exist sum of nums equal to k
 	 * @param num
 	 * @param k
@@ -24,6 +28,7 @@ public class SearchMethod {
 	}
 
 	/**
+	 * @problemType DFS
 	 * given a N*M garden, count puddles
 	 * @param garden
 	 * @return
@@ -56,6 +61,42 @@ public class SearchMethod {
 			}
 		}
 	}
+	
+	/**
+	 * @problemType BFS
+	 * given a N*M maze, count min path
+	 * @param maze
+	 * @param startX
+	 * @param startY
+	 * @param endX
+	 * @param endY
+	 * @return
+	 */
+	class Site {
+		int x;
+		int y;
+		public Site(int x, int y) {
+			this.x = x;
+			this.y = y;
+		}
+	}
+//	public static int minPath(char[][] maze, int startX, int startY, int endX, int endY) {
+//		int N = maze.length;
+//		int M = maze[0].length;
+//		int MAX = 2 * N * M;
+//		int[][] minPathMatrix = new int[N][M];
+//		for (int i = 0; i < N; i++) {
+//			for (int j = 0; j < M; j++) {
+//				minPathMatrix[i][j] = MAX;
+//			}
+//		}
+//		Queue<Site> queue = new LinkedList<Site>();
+//		
+//		queue.add(new Site(startX, startY));
+//		while (!queue.isEmpty()) {
+//			
+//		}
+//	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
